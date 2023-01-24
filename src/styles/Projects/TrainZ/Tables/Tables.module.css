@@ -1,0 +1,103 @@
+.buscador{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.buscador input{
+    width: 10rem;
+    margin-left: 1rem;
+    border: 0;
+    border-bottom: 1px solid #ffdd57;
+    background-color: transparent;
+    color: aliceblue;
+    text-align: center  ;
+}
+.buscador input:focus{
+    outline: none;
+    box-shadow: inset;
+}
+
+
+.tabla_contain {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.tabla {
+    width: 100%;
+    height: 30rem;
+    overflow: scroll;
+}
+
+.tabla_head,
+.tabla_main {
+    display: grid;
+    
+    /* max-width: 20rem; */
+    grid-template-columns: 5rem 15rem 15rem 10rem 5rem 10rem 10rem 10rem;
+    align-items: center;
+    /* justify-content: center; */
+    gap: auto;
+}
+
+.tabla_head {
+    width: fit-content;
+    background-color: black;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;
+    border-bottom: 1px solid aliceblue;
+    align-items: center;
+}
+.tabla_main{
+    align-items: center;
+}
+.tabla_head h4,.tabla_main p, .tabla_main div{ 
+    border-right: 1px solid aliceblue;
+    min-width: 5rem;
+    min-height: 2.5rem;
+    width: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    /* align-items: center; */
+    /* margin: .5rem; */
+    /* overflow-x: auto; */
+}
+.tabla_main button{
+    width: 3rem;
+    height: 2rem;
+    margin: auto;
+
+}
+
+
+/* =------------------------------------------ */
+.tabla::-webkit-scrollbar {
+    width: 0.5rem;
+}
+
+
+/* Track */
+.tabla::-webkit-scrollbar-track {
+    /* background: #f1f1f1; */
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+/* Handle */
+.tabla::-webkit-scrollbar-thumb {
+    /* background: #888; */
+    background: #ffdd57;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+.tabla::-webkit-scrollbar-thumb:hover {
+    background: firebrick;
+    width: 1rem;
+}

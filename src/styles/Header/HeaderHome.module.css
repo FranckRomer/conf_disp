@@ -1,0 +1,30 @@
+.header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 2rem;
+    border-bottom: 1px solid gray;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.logo,
+.menus,
+.login {
+    display: flex;
+    gap: 2rem;
+
+}
+.menus{
+    justify-content: center;
+}
+.login{
+    justify-content: right;
+}
+.header h4{
+    font-weight: normal;
+}
+.header h3{
+    text-decoration: underline;
+}
+.header h4:hover{
+    font-weight: bolder;
+}

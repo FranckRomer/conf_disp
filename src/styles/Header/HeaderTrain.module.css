@@ -1,0 +1,33 @@
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ffdd57;
+}
+.header div{
+    display: flex;
+}
+
+.header a {
+    transition: font 1s;
+    margin: 1rem 1rem;
+    color: black;
+}
+
+.header h4 {
+    font-weight: normal;
+
+}
+
+.header h3 {
+    border-bottom: 1px solid black;
+}
+
+.header h4:hover {
+    font-weight: bold;
+}
+
+@media only screen and (max-width : 620px) {
+    .header a{
+        margin: 1rem 1rem;
+    }
+}
