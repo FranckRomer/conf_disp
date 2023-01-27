@@ -1,4 +1,4 @@
-import { FindData } from "@/func/crud/crud"
+import { FindData } from "@/func/TrainCrud/crud"
 var moment = require('moment');
 
 ////////////////////////////////////////////////////////////////

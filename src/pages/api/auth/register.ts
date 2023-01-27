@@ -1,4 +1,4 @@
-import { FindData, InsertData } from "../../../func/crud/crud"
+import { FindData, InsertData } from "../../../func/TrainCrud/crud"
 
 export default async function registerNewUser(req:any, res:any) {
     console.log(req.body)

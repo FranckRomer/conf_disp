@@ -1,4 +1,4 @@
-import { FindData } from "@/func/crud/crud"
+import { FindData } from "@/func/TrainCrud/crud"
 
 ////////////////////////////////////////////////////////////////
 export default async function findDisp(req: any, res: any) {

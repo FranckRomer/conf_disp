@@ -1,6 +1,6 @@
 var cookie = require('cookie');
 var jwt = require('jsonwebtoken');
-import { FindData } from "../../../func/crud/crud"
+import { FindData } from "../../../func/TrainCrud/crud"
 
 export default async function loginHandler(req:any, res:any) {
     console.log(req.body)
