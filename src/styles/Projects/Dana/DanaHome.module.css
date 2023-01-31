@@ -1,0 +1,53 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+
+.main {
+    margin: 3rem;
+}
+
+.header_login {
+    display: flex;
+    gap: 2rem;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.subtitulo {
+    border-bottom: 1px solid aliceblue;
+}
+
+.tarjeta_contain {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.tarjeta {
+    border: 1px solid grey;
+    padding: 2rem;
+    margin: 3rem 0;
+    row-gap: 1rem;
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.tarjeta_img {
+    display: grid;
+    justify-content: center;
+    /* margin: auto; */
+    /* background-color: red; */
+}
+.tarjeta_info{
+    margin-top: 2rem;
+}
+
+
+.tarjeta:hover{
+    /* border-color: blue; */
+    background-color: slategray;
+}

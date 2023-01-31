@@ -3,6 +3,9 @@
     grid-template-columns: repeat(3, 1fr);
     padding: 2rem;
     border-bottom: 1px solid gray;
+    /* background-color: #413CA6; */
+    background-color: #2F59A5;
+    color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
