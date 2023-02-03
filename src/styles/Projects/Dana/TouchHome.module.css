@@ -1,0 +1,35 @@
+.home{
+    display: grid;
+}
+.tarjetas_contain{
+    display: grid;
+    gap: 1rem;
+    margin: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+.tarjeta{
+    height: 300px;
+    border: 1px solid black;
+    border-radius: 16px;
+    display: grid;
+    gap: 1rem;
+    opacity: .75;
+    transition: all .2s;
+}
+.tarjeta_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.tarjeta_info{
+    padding: 1rem;
+    overflow-y: scroll;
+    border-radius: 16px;
+    background-color: lightgoldenrodyellow  ;
+}
+.tarjeta:hover{
+    opacity: 1;
+    border: 3px solid cornflowerblue;
+
+}

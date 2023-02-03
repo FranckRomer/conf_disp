@@ -1,223 +1,97 @@
-.header{
-    margin: 2rem;
-    /* background-color: royalblue; */
-    border-bottom: 1px solid black;
+/* 
+    ?------------- Header ------------- 
+*/
+
+
+/* .html{
+    background-color: red;
+} */
+
+/* 
+    ?------------- Main ------------- 
+*/
+.main {
+    padding: 2rem;
+    /* border: 1px solid red; */
+    display: grid;
+    /* gap: 1rem; */
+    grid-template-columns: 20% 80%;
+    /* background-color: red; */
+    /* margin: 8px; */
+    background: rgb(2,0,36);
+    background: linear-gradient(-235deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%); 
 }
 
-.header a {
-    width: 120px;
-    height: 60px;
+
+/* 
+    ?------------- Menu ------------- 
+*/
+.menu{
+    /* border: 1px solid green; */
+    display: grid;
+    padding: 1rem 1.5rem;
+    background-color: whitesmoke;
+    /* border-right: 1px solid black; */
+    background-color: #437191;
+    color: aliceblue;
+    border-radius: 16px 0 0 16px;
+}
+.menu_volver{
+    display: grid;
+    /* border: 1px solid red; */
+}
+.menu_volver a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    border-bottom: 1px solid black;
+}
+.menu_home,
+.menu_sin_asignar,
+.menu_proyectos,
+.menu_tabla{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
 }
-
-.header a:hover {
-    background-color: aliceblue;
-    border-radius: 8px;
-    color: black;
+.menu h2{
+    color: aliceblue;
+    border-bottom: 1px solid aliceblue;
+}
+.menu h3{
+    /* font-weight: normal; */
+    color: lightgray;
+    transition: all .3s;
+}
+.menu h3:hover{
+    /* font-weight: bold; */
+    color: aliceblue;
+    font-size: 1.5rem;
+}
+.menu_logo h3{
+    color: aliceblue;
+    /* font-weight: bold; */
+}
+.menu_volver img{
     filter: invert(1);
 }
 
-.titulo {
-    text-align: center;
-    /* background-color: royalblue; */
-    /* color: aliceblue; */
-}
-
-/* ? ----------------------------- */
-.main {
-    padding: .5rem 3rem;
-}
-
-
-.grid {
+/* 
+?------------- Show ------------- 
+*/
+.show{
+    width: 100%;
+    height: 90vh;
+    /* border: 1px solid green; */
     display: grid;
-    grid-template-columns: 60% 40%;
-    gap: 2rem;
-    border-top: 1px solid black;
+    padding: 3rem;
+    overflow: hidden;
+    background-color: whitesmoke;
+    border-radius: 0 16px 16px 0;
 }
-
-/* ? ----------------------------- */
-.seleccionar_contain {
-    margin: 1rem;
-}
-
-.seleccionar_contain h1 {
-    font-size: 24px;
-}
-
-.buscador {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-}
-
-.tabla {
-    border: 1px solid grey;
-    border-radius: 8px;
-    margin: 3rem 0;
-    text-align: center;
-}
-
-.tabla_head {
-    font-weight: bold;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid grey; 
-    background-color: #2F59A5;
-    color: aliceblue;
-}
-
-.tabla_head p {
-    padding: 1rem;
-}
-
-.tabla_body {
-    min-height: 315px;
+.show main{
+    overflow-x: hidden;
     overflow-y: scroll;
-}
-
-.tabla_dato {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    border-bottom: 1px solid grey; 
-}
-
-.tabla_dato p {
-    border-right: 1px solid grey;
-    padding: .5rem;
-}
-
-.tabla_dato button {
-    height: 2rem;
-}
-
-/* ? ----------------------------- */
-.pantalla_contain {
-    margin: 1rem 0;
-}
-
-.selecionar_pantalla {
-    margin: 2rem 1rem 0 1rem;
-    display: flex;
-    gap: 2rem;
-    justify-content: center;
-}
-
-.selecionar_pantalla p {
-    cursor: pointer;
-}
-
-.selecionar_pantalla p:hover {
-    font-weight: bold;
-}
-
-.pantalla {
-    width: 420px;
-    margin: 3rem auto;
-    padding: 3rem 1rem;
-    display: grid;
-    gap: 3rem;
-    row-gap: 5rem;
-    grid-template-columns: repeat(3, 1fr);
-    border: 1px solid grey;
-    border-radius: 8px;
-    background-color: rgba(0, 0, 0, 0.90);
-}
-
-.pantalla button {
-    width: 50px;
-    height: 50px;
-    margin: auto;
-    border-radius: 50%;
-}
-
-.nombre_touch {
-    display: grid;
-    justify-content: space-around;
-    align-items: center;
-    grid-template-columns: 40% 40% 20%;
-    border-bottom: 1px solid black;
-}
-
-.nombre_touch h2 {
-    text-align: center;
-}
-
-.nombre_touch button {
-    justify-content: flex-end;
-}
-
-.sonar,
-.sonando {
-    width: 80px;
-    margin: 1rem 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    border: 3px solid rgb(41, 95, 41);
-    border-radius: 8px;
-    padding: .5rem;
-    margin-left: auto;
-}
-
-.sonar:hover {
-    background-color: rgb(41, 95, 41);
-    color: aliceblue;
-}
-
-.sonando {
-    border-color: red;
-    background-color: lightcoral;
-    color: aliceblue;
-}
-
-.sonando:hover {
-    background-color: aliceblue;
-    color: black;
-}
-
-
-/* *----------------------------------- */
-.modificarDatos {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    border: 1px solid gray;
-    padding: 1rem 2rem;
-    border-radius: 8px;
-    gap: 1rem;
-    margin: 0 auto;
-}
-
-
-.ssid,
-.pass,
-.identificador,
-.project {
-    display: flex;
-    justify-content: space-between;
-    margin: 1rem 7rem;
-}
-
-.modificarDatos input {
-    text-align: center;
-    border: none;
-    border-bottom: 1px solid black;
-}
-
-.ssid_button {
-    width: 100px;
-    margin: 1rem auto;
-}
-
-
-/* *----------------------------------- */
-.sin_datos {
-    color: red;
-    margin-top: 5rem;
+    /* border: 1px solid salmon; */
 }

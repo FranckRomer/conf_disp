@@ -19,12 +19,13 @@ export default async function TouchStatus(req:any, res:any) {
         // Se crea el usuario
         const newData ={
             numero_serie: numero_serie,
-            project: "none",
-            identificador: "none",
+            licencia: true,
+            project: "sin asignar",
+            identificador: "sin asignar",
             ssid: "RED ACCESA",
             password: "037E32E7",   
             tiempo_envio: 30,     
-            sonarEsp: false,
+            sonarEsp: true,            
             boton01:{
                 can : "02",
                 pin : "1",
@@ -68,49 +69,49 @@ export default async function TouchStatus(req:any, res:any) {
                 rgb : "XXX",
             },                          
             boton07:{
-                can : "02",
+                can : "04",
                 pin : "1",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                          
             boton08:{
-                can : "02",
+                can : "04",
                 pin : "2",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                          
             boton09:{
-                can : "02",
+                can : "04",
                 pin : "3",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                          
             boton10:{
-                can : "02",
+                can : "04",
                 pin : "4",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                          
             boton11:{
-                can : "02",
+                can : "04",
                 pin : "5",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                          
             boton12:{
-                can : "02",
+                can : "04",
                 pin : "A",
                 percentaje : "100",
                 tiempo : "00",
                 rgb : "XXX",
             },                           
         }
-        const result_inset = InsertData(newData, "touch", "touchFirmware")  
+        const result_inset = await InsertData(newData, "touch", "touchFirmware")  
         return res.status(200).json(newData)
     }
     
