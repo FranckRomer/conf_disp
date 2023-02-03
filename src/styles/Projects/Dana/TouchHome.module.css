@@ -5,7 +5,7 @@
     display: grid;
     gap: 1rem;
     margin: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 }
 .tarjeta{
     height: 300px;
@@ -24,7 +24,7 @@
 }
 .tarjeta_info{
     padding: 1rem;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
     border-radius: 16px;
     background-color: lightgoldenrodyellow  ;
 }

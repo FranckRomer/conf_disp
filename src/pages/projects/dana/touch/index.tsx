@@ -17,6 +17,7 @@ const TouchPage = () => {
                     <main className={styles.home}>
                         <h1>Configuración de Touchs </h1>
                         <p>Todos los touch necesitan internet para poder ser configurados. La configuracion se guarda en una base de datos. Aqui se puede modificar cada parametro de ellos.</p>
+                        <p>"Por defecto al programar un touch entra a la plantilla de <b>NO ASIGNADO</b>"</p>
 
                         <div className={styles.tarjetas_contain}>
 
@@ -33,7 +34,6 @@ const TouchPage = () => {
                                 <div className={styles.tarjeta_info}> 
                                     <h1>No Asignado</h1>
                                     <p>Touch que aun no se les a asignado un proyecto</p>
-                                    <p>"Por defecto al programar un touch entra en esta plantilla"</p>
                                 </div>
                             </Link>
                             
@@ -53,7 +53,7 @@ const TouchPage = () => {
                                 </div>
                             </Link>
 
-                            <Link href={"/projects/dana/touch/sinAsignar"} className={styles.tarjeta}>
+                            <Link href={"/projects/dana/touch/tabla"} className={styles.tarjeta}>
                                 <div className={styles.tarjeta_img}>
                                     <Image
                                         src="/icons/tablas.png"

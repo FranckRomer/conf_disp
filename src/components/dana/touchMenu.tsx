@@ -22,17 +22,17 @@ const TouchMenu = (prop:any) => {
                             {/* Volver */}
                         </Link>
                     </div>
-                    <Link href={"/projects/dana/touch"} className={styles.menu_home}>                        
-                        <h2>Home</h2>
+                    <Link href={"/projects/dana/touch"} className={styles.menu_home}>     
+                        {prop.tipo == "home" ? <h2>Home</h2> : <h3>Home</h3>}                   
                     </Link>
                     <Link href={"/projects/dana/touch/sinAsignar"} className={styles.menu_sin_asignar}>
-                        <h3>Sin Asignar</h3>
+                        {prop.tipo == "sin_asignar" ? <h2>Sin Asignar</h2> : <h3>Sin Asignar</h3>}                   
                     </Link>
                     <Link href={"/projects/dana/touch/proyectos"} className={styles.menu_proyectos}>
-                        <h3>Proyectos</h3>
+                        {prop.tipo == "proyectos" ? <h2>Proyectos</h2> : <h3>Proyectos</h3>}                   
                     </Link>
                     <Link href={"/projects/dana/touch/tabla"} className={styles.menu_tabla}>
-                        <h3>Tabla de Status</h3>
+                        {prop.tipo == "tabla" ? <h2>Tabla de Status</h2> : <h3>Tabla de Status</h3>}                   
                     </Link>
                 </section>
     )
