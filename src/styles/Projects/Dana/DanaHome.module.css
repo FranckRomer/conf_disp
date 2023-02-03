@@ -33,7 +33,9 @@
     margin: 3rem 0;
     row-gap: 1rem;
     cursor: pointer;
+    opacity: .5;
     transition: all .5s;
+    border-radius: 16px;
 }
 
 .tarjeta_img {
@@ -49,5 +51,7 @@
 
 .tarjeta:hover{
     /* border-color: blue; */
-    background-color: slategray;
+    /* background-color: rgb(226, 226, 226); */
+    opacity: 1;
+    border-color: cornflowerblue;
 }
