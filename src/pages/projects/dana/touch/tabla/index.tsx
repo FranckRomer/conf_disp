@@ -5,7 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TouchMenu from '@/components/dana/touchMenu'
 
-const TablasTouch = () => {
+const TablasTouchConf = () => {
     const [menu, setMenu] = useState("home")
 
     return (
@@ -24,4 +24,4 @@ const TablasTouch = () => {
     )
 }
 
-export default TablasTouch
+export default TablasTouchConf

@@ -12,10 +12,10 @@ const ViewDocument = (props: any) => {
         <div>
             <section className={styles.Imagen} onClick={() => setModal(true)} >
                 <Image
-                    src="/icons/ultra-secreto.png"
+                    src="/icons/carpeta.png"
                     alt="Registro Completo"
-                    width={40}
-                    height={40}
+                    width={32}
+                    height={32}
                 />
             </section>
             {modal ?

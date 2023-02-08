@@ -48,7 +48,7 @@ const Edit = (props: any) => {
         <div>
             <section className={styles.Imagen} onClick={() => obtenerDatos()}>
                 <Image
-                    src="/icons/big-data.png"
+                    src="/icons/ajustes.png"
                     alt="Registro Completo"
                     width={40}
                     height={40}

@@ -37,8 +37,8 @@ export default function Home() {
             <Image
               src="/imgs/configuraciones.png"
               alt="Pagina oficial de accesa: https://accesa.me/"
-              width={400}
-              height={350}
+              width={350}
+              height={280}
             />
           </div>
         </section>
@@ -49,8 +49,8 @@ export default function Home() {
               <Image
                 src="/imgs/dana.png"
                 alt="Pagina oficial de accesa: https://accesa.me/"
-                width={200}
-                height={200}
+                width={180}
+                height={180}
               />
             </div>
             <div className={styles.tarjeta_info}>
@@ -64,8 +64,8 @@ export default function Home() {
               <Image
                 src="/imgs/train.png"
                 alt="Pagina oficial de accesa: https://accesa.me/"
-                width={200}
-                height={200}
+                width={180}
+                height={180}
               />
             </div>
             <div className={styles.tarjeta_info}>

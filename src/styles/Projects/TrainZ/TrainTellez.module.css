@@ -7,6 +7,8 @@
     justify-content: center;
     align-items: center;
     animation: born 2.5s;
+    background-color: #121212;
+    color: aliceblue;
 }
 
 .main h2 {

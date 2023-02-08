@@ -7,6 +7,9 @@
 }
 .main section:first-child{
   background-color: rgb(122, 122, 122);
+  background-color: #0093E9;
+  background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+
   color: aliceblue;
 }
 /* //? ----------------------- */
@@ -16,10 +19,10 @@
   display: grid;
   padding: auto;
   /* background-color: whitesmoke; */
-  padding: 3rem;
+  padding: 2rem;
 }
 .titulo{
-  font-size: 4em;
+  font-size: 3em;
 }
 .welcome_img {
   margin: auto;
@@ -29,16 +32,16 @@
 
 /* //? ----------------------- */
 .tarjetas_contain{
-  padding: 3rem;
+  padding: 2rem;
   display: grid;
   height: 75vh;
-  row-gap: 2rem;
+  row-gap: 1rem;
   justify-content: center;
 }
 .tarjeta{
   display: flex;
-  width: 540px;
-  height: 240px;
+  width: 500px;
+  height: 200px;
   /* border: 1px solid gray; */
   border-radius: 16px;
   transition: all 1s;

@@ -2,6 +2,7 @@
     display: block;
     text-align: center;
     animation: born 2.5s both;
+    color: black;
 }
 
 .selection {
