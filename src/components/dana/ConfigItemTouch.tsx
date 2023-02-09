@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import styles from "@/styles/Projects/Dana/ConfigItemTouch.module.css"
 import internal from 'stream'
+import { log } from 'console'
 
 const ConfigItemTouch = (props: any) => {
     const [datos, setDatos] = useState(props.item)
@@ -13,6 +14,7 @@ const ConfigItemTouch = (props: any) => {
         setVentanaBotones(true)
         const newBoton = "boton" + num_boton
         SetCambiarBoton(datos.newBoton)
+        console.log(datos.boton01);        
     }
 
     //
