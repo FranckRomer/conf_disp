@@ -10,7 +10,7 @@ export default async function FindRegDana(req:any, res:any) {
     
     //Busqueda
     let result_find = await FindData(querys, "touch", "touchFirmware")
-    console.log(result_find);
+    // console.log(result_find);
     //   
     //
     return res.status(200).json(result_find)
