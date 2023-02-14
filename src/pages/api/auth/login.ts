@@ -24,14 +24,16 @@ export default async function loginHandler(req:any, res:any) {
         console.log("!!!!! CONFIRMED  !!!!!")
         const token = jwt.sign({
             exp: Math.floor(Date.now() / 1000) + (60 * 60 * 24 * 30),  //seg min hora dia
-            email: 'admin@admin.com',
+            email: result[0].email,
             cargo: result[0].cargo
         }, 'secret')
 
         const serialized = cookie.serialize('myTokenName', token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            // secure: process.env.NODE_ENV === 'production',
+            // sameSite: 'strict',
+            Secure: false,
+            SameSite: "None",
             maxAge: 1000 * 60 * 60 * 24 * 30,
             path: '/'
         })
