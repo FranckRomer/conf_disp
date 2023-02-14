@@ -13,8 +13,10 @@ export default function logoutHandler(req:any, res:any) {
         jwt.verify(myTokenName, 'secret')
         const serialized = cookie.serialize('myTokenName', null, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === 'production',
-            sameSite: 'strict',
+            // secure: process.env.NODE_ENV === 'production',
+            // sameSite: 'strict',
+            Secure: false,
+            SameSite: "None",
             maxAge: 0,
             path: '/'
         })

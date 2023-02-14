@@ -43,6 +43,4 @@ export default async function loginHandler(req:any, res:any) {
     } 
 
     return res.status(401).json({error: 'invalid email or password'})
-
-
 }
