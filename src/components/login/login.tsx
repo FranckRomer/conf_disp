@@ -26,6 +26,7 @@ const Login = () => {
             const response = await axios.post('/api/auth/login', Credencials)
             console.log(response)
             if (response.status === 200) {
+                router.reload()
                 router.push('/')
             }
         } catch (error) {
