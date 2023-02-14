@@ -74,7 +74,7 @@ const SinAsignar = () => {
                 <TouchMenu tipo="sin_asignar"></TouchMenu>
                 <section className={stylesBasic.show}>
                     <main className={styles.home}>
-                        <h1>Touch con proyecto "Sin Asignar" </h1>
+                        <h1>Touch con proyecto: Sin Asignar </h1>
 
                         <h2>Registros Totales: {filteredData.length}</h2>
                         <div className={styles.buscador}>
@@ -106,6 +106,7 @@ const SinAsignar = () => {
                                     <div className={styles.tarjeta_info}>
                                         <h1>{item.identificador}</h1>
                                         <p><b>MacAddres:</b> {item.numero_serie} </p>
+                                        <p><b>Sonando: </b> {item.sonarEsp ? "Ok" : "No"} </p>
                                     </div>
                                 </div>
                             ))}

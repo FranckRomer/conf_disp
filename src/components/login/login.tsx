@@ -26,7 +26,7 @@ const Login = () => {
             const response = await axios.post('/api/auth/login', Credencials)
             console.log(response)
             if (response.status === 200) {
-                router.push('/trainz')
+                router.push('/')
             }
         } catch (error) {
             setError(false)
@@ -55,6 +55,7 @@ const Login = () => {
                     type="email"
                     placeholder='email'
                     onChange={handleChange}
+                    required
                 />
                 <p>Contraseña:</p>
                 <input
@@ -64,6 +65,7 @@ const Login = () => {
                     // onKeyUp={handleSubmit}
                     placeholder='password'
                     onChange={handleChange}
+                    required
                 />
 
                 <button type="button" onClick={handleSubmit}>Iniciar</button>

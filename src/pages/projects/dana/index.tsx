@@ -8,11 +8,11 @@ const DanaHome = () => {
         <>
             <header className={styles.header}>
                 <div className={styles.header_home}>
-                    <a href="/">Home</a>
+                    <Link href="/">Home</Link>
                 </div>
                 <div className={styles.header_login}>
-                    <a href="/login">Login</a>
-                    <a href="/profile">User</a>
+                    <Link href="/login">Login</Link>
+                    <Link href="/profile">User</Link>
                 </div>
             </header>
             <main className={styles.main}>

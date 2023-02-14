@@ -61,6 +61,7 @@ const Register = () => {
                     type="email"
                     placeholder='email'
                     onChange={handleChange}
+                    required
                 />
                 <p>Contraseña:</p>
                 <input
@@ -68,6 +69,7 @@ const Register = () => {
                     type="password"
                     placeholder='password'
                     onChange={handleChange}
+                    required
                 />
                 <p>Repetir contraseña:</p>
                 <input
@@ -75,6 +77,7 @@ const Register = () => {
                     type="password"
                     placeholder='password'
                     onChange={handleChange}
+                    required
                 />
                 <p>Empresa:</p>
                 <input
@@ -82,13 +85,15 @@ const Register = () => {
                     type="text"
                     placeholder='Compañia'
                     onChange={handleChange}
+                    required
                 />
                 <p>Cargo:</p>
                 <input
                     name='cargo'
                     type="text"
                     placeholder='Cargo'
-                    onChange={handleChange}                    
+                    onChange={handleChange}    
+                    required                
                     // onKeyUp={handleSubmit}
                 />
 

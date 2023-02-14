@@ -17,7 +17,7 @@ const TouchPage = () => {
                     <main className={styles.home}>
                         <h1>Configuración de Touchs </h1>
                         <p>Todos los touch necesitan internet para poder ser configurados. La configuracion se guarda en una base de datos. Aqui se puede modificar cada parametro de ellos.</p>
-                        <p>"Por defecto al programar un touch entra a la plantilla de <b>NO ASIGNADO</b>"</p>
+                        <p>Por defecto al programar un touch entra a la plantilla de <b>NO ASIGNADO</b></p>
 
                         <div className={styles.tarjetas_contain}>
 

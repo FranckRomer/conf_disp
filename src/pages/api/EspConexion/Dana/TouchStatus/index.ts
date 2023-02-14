@@ -24,8 +24,8 @@ export default async function TouchStatus(req:any, res:any) {
             identificador: "sin asignar",
             ssid: "RED ACCESA",
             password: "037E32E7",   
-            tiempo_envio: 30,     
-            sonarEsp: true,            
+            tiempo_envio: 10,     
+            sonarEsp: false,            
             boton01:{
                 can : "02",
                 pin : "1",

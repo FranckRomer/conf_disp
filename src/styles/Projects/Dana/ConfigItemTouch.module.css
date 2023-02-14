@@ -29,7 +29,7 @@
 .header {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 }
 
 .cerrar {
@@ -117,7 +117,7 @@
 .seleccion_pantalla {
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     margin-top: 1rem;
     cursor: pointer;
 }
@@ -227,8 +227,8 @@
     /* z-index: 10000; */
 }
 .panel_botones{
-    width: 60vw;
-    height: 60vh;
+    width: 30vw;
+    height: fit-content;
     position: absolute;
     top: 0;
     left: 0;
@@ -238,4 +238,20 @@
     padding: 2rem;
     border-radius: 16px;
     background-color: whitesmoke;
+}
+.panel_botones form{
+    /* height: 47vh; */
+    display: grid;
+    row-gap: 1rem;
+    padding: 1rem;
+    /* border: 1px solid black; */
+}
+.panel_botones form div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.panel_botones input{
+    width: 100px;
+    text-align: center;
 }
