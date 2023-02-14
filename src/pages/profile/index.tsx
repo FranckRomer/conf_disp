@@ -24,6 +24,7 @@ const Profile = () => {
             // console.error(error.message);
             setError(true)
         }
+        router.reload()
         router.push("/login");
     };
     return (
