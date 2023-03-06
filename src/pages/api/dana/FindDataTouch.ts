@@ -4,9 +4,14 @@ import { FindData } from"@/func/DanaCrud/danaCrud"
 export default async function FindRegDana(req:any, res:any) {
     // console.log("-----------------------------------------");
     // console.log(req.body)
-    // const { numero_serie } = req.body
+    const { query } = req.body
+    // console.log(query)
     // check if email and password are valid
-    let querys = {}
+    if (query == '') {
+        
+    }
+    let querys = {project: query}
+
     
     //Busqueda
     let result_find = await FindData(querys, "touch", "touchFirmware")

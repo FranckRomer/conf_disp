@@ -24,7 +24,7 @@ const SinAsignar = () => {
 
     const obtenerDatos = async () => {
         try {
-            const data_res = await axios.post('/api/dana/FindDataTouch')
+            const data_res = await axios.post('/api/dana/FindDataTouch', {'query':'sin asignar'})
             // console.log(data_res.data)
             setData(data_res.data)
         } catch (error) {
