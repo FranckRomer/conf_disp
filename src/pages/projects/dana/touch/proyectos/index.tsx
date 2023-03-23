@@ -5,6 +5,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import TouchMenu from '@/components/dana/touchMenu'
 import axios from 'axios'
+import ConfigItemTouch from '@/components/dana/ConfigItemTouch'
 
 const ProyectosTouch = () => {
     const [data, setData] = useState([])
@@ -20,12 +21,13 @@ const ProyectosTouch = () => {
 
     const obtenerDatos = async () => {
         try {
-            const data_res = await axios.post('/api/dana/FindDataTouch', {'query':''})
-            // console.log(data_res.data)
+            const data_res = await axios.post('/api/dana/FindDataTouch', { 'query': '' })
+            console.log(data_res.data)
             setData(data_res.data)
         } catch (error) {
             // setErrors(error)
-            console.log(error);
+            // console.log(error);
+            // console.log("NO SE PUEDO OBTENER DATOS");  
         }
     }
     const [menu, setMenu] = useState("home")
@@ -45,12 +47,23 @@ const ProyectosTouch = () => {
         else {
             // console.log(el.element);
             try {
-                return el.numero_serie.toLowerCase().includes(searchValue) || el.identificador.toLowerCase().includes(searchValue) || el.licencia.toLowerCase().includes(searchValue) || el.project.toLowerCase().includes(searchValue)
+                return el.project.toLowerCase().includes(searchValue) 
             } catch (error) {
                 return
             }
         }
     })
+
+    //// ------------------------
+    const ActivarPanel = (newDatos: any) => {
+        setPanel(true)
+        SetDatosPanel(newDatos)
+    }
+
+    // -----------------------
+    const hijoAPadre = () => {
+        setPanel(false);
+    }
 
     return (
         <>
@@ -58,14 +71,14 @@ const ProyectosTouch = () => {
             <main className={stylesBasic.main}>
                 <TouchMenu tipo="proyectos"></TouchMenu>
                 <section className={stylesBasic.show}>
-                <main className={styles.home}>
-                        <h1>Touch con proyecto: Sin Asignar </h1>
+                    <main className={styles.home}>
+                        <h1>Touch por proyecto </h1>
 
-                        <h2>Registros Totales: {filteredData.length}</h2>
+                        <h2>Proyectos Totales: {filteredData.length}</h2>
                         <div className={styles.buscador}>
                             <h3>Buscar:</h3>
                             <input
-                                type="input" placeholder="numero_serie" name="name" id='name' required
+                                type="input" placeholder=" Proyecto " name="name" id='name' required
                                 value={searchValue}
                                 onChange={onSearchValueChange}
                             />
@@ -76,31 +89,51 @@ const ProyectosTouch = () => {
                             ""
                         }
 
-                        <div className={styles.tarjetas_contain}>
-
-                            {filteredData.map((item: any, index) => (
-                                <div className={styles.tarjeta} key={index} >
-                                    <div className={styles.tarjeta_img}>
-                                        <Image
-                                            src="/icons/desconocido.png"
-                                            alt="Pagina oficial de accesa: https://accesa.me/"
-                                            width={120}
-                                            height={120}
-                                        />
-                                    </div>
-                                    <div className={styles.tarjeta_info}>
-                                        <h1>{item.identificador}</h1>
-                                        <p><b>MacAddres:</b> {item.numero_serie} </p>
-                                        <p><b>Sonando: </b> {item.sonarEsp ? "Ok" : "No"} </p>
-                                    </div>
+                        {filteredData.map((item: any, index) => (
+                            <div>
+                                <hr />
+                                <h1 className={styles.proyecto_name}>
+                                    {item.project.toUpperCase()}
+                                </h1>
+                                <div className={styles.tarjetas_contain}>
+                                    {item.objetos.map((item: any, index2: any) => (
+                                        <div className={styles.tarjeta} key={index2} onClick={() => ActivarPanel(item)} >
+                                            <div className={styles.tarjeta_img}>
+                                                <Image
+                                                    src="/icons/desconocido.png"
+                                                    alt="Pagina oficial de accesa: https://accesa.me/"
+                                                    width={120}
+                                                    height={120}
+                                                />
+                                            </div>
+                                            <div className={styles.tarjeta_info}>
+                                                <h1>{item.identificador}</h1>
+                                                <p><b>MacAddres:</b> {item.numero_serie} </p>
+                                                <p><b>Sonando: </b> {item.sonarEsp ? "Ok" : "No"} </p>
+                                            </div>
+                                        </div>
+                                    ))}
                                 </div>
-                            ))}
-
-                        </div>
+                                <hr />
+                            </div>
+                        ))}
+                        
 
                     </main>
                 </section>
             </main>
+
+            {/* //*----------------------------------- */}
+            {panel ?
+                //
+                <ConfigItemTouch
+                    item={datosPanel}
+                    panel={panel}
+                    hijoAPadre={hijoAPadre} >
+                </ConfigItemTouch>
+                :
+                ""
+            }
         </>
     )
 }

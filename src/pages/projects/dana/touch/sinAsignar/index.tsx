@@ -29,7 +29,8 @@ const SinAsignar = () => {
             setData(data_res.data)
         } catch (error) {
             // setErrors(error)
-            console.log(error);
+            // console.log(error);
+            console.log("NO SE PUEDO OBTENER DATOS");            
         }
     }
 
@@ -86,7 +87,7 @@ const SinAsignar = () => {
                             />
                         </div>
                         {filteredData.length == 0 ?
-                            <h1>no hay datos</h1>
+                            <h1>No hay registros {'"Sin Asignar"'}</h1>
                             :
                             ""
                         }
@@ -124,14 +125,7 @@ const SinAsignar = () => {
                     item={datosPanel} 
                     panel= {panel}
                     hijoAPadre={hijoAPadre} >
-                </ConfigItemTouch>
-                // <div>
-                //     <div className={stylesPanel.panel_oscuro} onClick={() => setPanel(false)}></div>
-                //     <div className={stylesPanel.panel}>
-                //     <div className={stylesPanel.cerrar} onClick={() => setPanel(false)}>✖</div>
-                //         <h1>FUNCIONA</h1>                        
-                //     </div>
-                // </div>
+                </ConfigItemTouch>                
                 :
                 ""
             }

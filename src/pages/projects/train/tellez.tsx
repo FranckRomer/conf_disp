@@ -14,14 +14,17 @@ export default function Home() {
     })
 
     const obtenerDatos = async () => {
-
-        const data = await fetch('http://74.208.233.208:3001/api/v1/camaras')
-        const users = await data.json()
+        try {
+            const data = await fetch('http://74.208.233.208:3001/api/v1/camaras')
+            const users = await data.json()
+            setEquipo(users.tiempoReal)            
+        } catch (error) {
+            console.log(error);            
+        }
         // console.log(users.tiempoReal)
 
         // console.log(users.tiempoReal.time.substring(3, 20));
 
-        setEquipo(users.tiempoReal)
 
     }
 

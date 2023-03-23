@@ -1,6 +1,20 @@
 .home{
-    display: grid;
+    display: block;
 }
+.buscador {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    margin: 1rem auto;
+    /* border: 1px solid red; */
+}
+.buscador input{
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    text-align: center;
+}
+
 .tarjetas_contain{
     display: grid;
     gap: 1rem;
@@ -8,7 +22,7 @@
     grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
 }
 .tarjeta{
-    height: 300px;
+    height: 330px;
     border: 1px solid black;
     border-radius: 16px;
     display: grid;
@@ -16,6 +30,7 @@
     opacity: .75;
     cursor: pointer;
     transition: all .2s;
+    overflow-y: hidden;
 }
 .tarjeta_img{
     display: flex;
@@ -32,5 +47,9 @@
 .tarjeta:hover{
     opacity: 1;
     border: 3px solid cornflowerblue;
-
+}
+.proyecto_name{
+    text-align: center;
+    margin: 2rem auto .5rem auto;
+    font-style: oblique;
 }
