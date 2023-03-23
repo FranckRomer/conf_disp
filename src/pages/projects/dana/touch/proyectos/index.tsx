@@ -90,7 +90,7 @@ const ProyectosTouch = () => {
                         }
 
                         {filteredData.map((item: any, index) => (
-                            <div>
+                            <div key={index}>
                                 <hr />
                                 <h1 className={styles.proyecto_name}>
                                     {item.project.toUpperCase()}
