@@ -50,7 +50,7 @@ const DanaHome = () => {
                         </div>
                     </Link>
 
-                    <Link href={"/projects/dana"} className={styles.tarjeta}>
+                    {/* <Link href={"/projects/dana"} className={styles.tarjeta}>
                         <div className={styles.tarjeta_img}>
                             <Image
                                 src="/imgs/salidas.png"
@@ -63,7 +63,7 @@ const DanaHome = () => {
                             <h3>Tarjeta de Salidas</h3>
                             <p>Configuracion de tarjeta de salidas</p>
                         </div>
-                    </Link>
+                    </Link> */}
                     
                 </section>
             </main>

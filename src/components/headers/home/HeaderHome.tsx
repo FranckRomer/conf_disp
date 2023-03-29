@@ -19,18 +19,18 @@ const HeaderHome = (props: any) => {
                 <Link href={"projects/dana"}>
                     {props.tipo == "dana" ? <h3>Dana</h3> : <h4>Dana</h4>}
                 </Link>
-                <Link href={"projects/dana"}>
+                {/* <Link href={"projects/dana"}>
                     {props.tipo == "dana" ? <h3>Parking</h3> : <h4>Parking</h4>}
-                </Link>
+                </Link> */}
             </div>
 
             <div className={styles.login}>
                 <Link href={"/login"}>
                     {props.tipo == "login" ? <h3>Login</h3> : <h4>Login</h4>}
                 </Link>
-                <Link href={"/profile"}>
+                {/* <Link href={"/profile"}>
                     {props.tipo == "user" ? <h3>User</h3> : <h4>User</h4>}                    
-                </Link>
+                </Link> */}
             </div>
 
         </div>

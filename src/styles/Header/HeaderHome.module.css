@@ -7,7 +7,8 @@
     background-color: #2F59A5;
     /* background-color: #0093E9; */
     /* background-color: #121212; */
-
+    /* overflow-x: scroll; */
+    
     color: aliceblue;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
@@ -16,7 +17,7 @@
 .menus,
 .login {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
 
 }
 .menus{

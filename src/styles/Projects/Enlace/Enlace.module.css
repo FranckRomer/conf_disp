@@ -1,0 +1,16 @@
+.enlace{
+    min-height: 100vh;
+    color: aliceblue;
+    background-color: black;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+}
+.main{
+    display: grid;
+    margin: auto;
+    /* border: 1px solid red; */
+}

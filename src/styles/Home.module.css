@@ -3,7 +3,9 @@
   min-height: 88vh;
   display: grid;
   gap: 2rem;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  /* grid-template-columns: repeat(2, 1fr); */
+  overflow-y: scroll;
 }
 .main section:first-child{
   background-color: rgb(122, 122, 122);
@@ -22,7 +24,7 @@
   padding: 2rem;
 }
 .titulo{
-  font-size: 3em;
+  font-size: 2em;
 }
 .welcome_img {
   margin: auto;
@@ -32,11 +34,12 @@
 
 /* //? ----------------------- */
 .tarjetas_contain{
-  padding: 2rem;
+  padding: 2rem ;
   display: grid;
   height: 75vh;
   row-gap: 1rem;
   justify-content: center;
+  /* margin: 0 rem; */
 }
 .tarjeta{
   display: flex;
@@ -44,7 +47,7 @@
   height: 200px;
   /* border: 1px solid gray; */
   border-radius: 16px;
-  transition: all 1s;
+  transition: all .5s;
 }
 
 
@@ -62,4 +65,25 @@
 }
 .tarjeta_img{
   margin: auto auto;
+}
+
+@media only screen and (max-width: 500px) {
+  .main{
+    /* border: 1px solid red; */
+    overflow-x: hidden;
+  }
+  .welcome_img img{
+    width: 60vw;
+  }
+  .tarjeta{
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    width: 80vw;
+    height: auto;
+  }
+  
+  .tarjeta_img img{
+    width: 120px;
+    height: 120px;
+  }
 }

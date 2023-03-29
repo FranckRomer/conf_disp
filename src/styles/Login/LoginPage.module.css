@@ -56,13 +56,15 @@
     margin: auto;
     color: aliceblue;
 }
-.login form{
+
+.login form {
     display: grid;
     gap: 1rem;
     /* border: 1px solid red; */
 
 }
-.login input{
+
+.login input {
     background-color: transparent;
     border: 0;
     border-bottom: 1px solid gray;
@@ -71,21 +73,24 @@
     cursor: pointer;
     transition: all .5s;
 }
-.login input:focus{
+
+.login input:focus {
     border-color: #f9c015;
     outline: none;
     background-color: #121212;
 }
-.login input:hover{
+
+.login input:hover {
     border-color: #f9c015;
     background-color: #121212;
-    
+
 }
 
-.login p{
-    margin: 1rem 0 auto ;
+.login p {
+    margin: 1rem 0 auto;
 }
-.login button{
+
+.login button {
     height: 1.8rem;
     border: 0;
     margin: 1rem 0;
@@ -93,9 +98,12 @@
     background-color: #121212;
     color: aliceblue;
     transition: all .35s;
+    border: 1px solid aliceblue;
 }
-.login button:hover{
+
+.login button:hover {
     background-color: #f9c015;
+    border-color: #f9c015;
     color: black;
     /* width: 110%;
     height: 110%; */
@@ -111,13 +119,27 @@
     color: black;
     background-color: aliceblue;
 }
-.recuperar{
+
+.recuperar {
     display: flex;
     justify-content: center;
     color: lightgray;
 }
-.recuperar a{
+
+.recuperar a {
     font-style: oblique;
     text-decoration: underline;
     color: aqua;
+}
+
+@media only screen and (max-width: 500px) {
+    .selection h1 {
+        font-size: 1.4em;
+    }
+    .selection h2 {
+        font-size: 1em;
+    }
+    .selection h2:hover{
+        font-size: 1.4em;
+    }
 }

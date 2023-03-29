@@ -8,6 +8,8 @@ const Edit = (props: any) => {
     const [modal, setModal] = useState(false)
     const [newTodoValue, setNewTodoValues] = React.useState(JSON.stringify(props.data, null, 4))
     const [loader, setLoader] = useState(false)
+    const [datos, setDatos] = useState(props.data)
+    const [error, setError] = useState(false)
     // useEffect(() => {
     //   obtenerDatos()
     // })
@@ -32,10 +34,21 @@ const Edit = (props: any) => {
     }
 
     //? -------------------------------------------------------------
-    const CambiarReg = () => {
-        console.log("HOla");
+    const CambiarReg = async() => {
+        // console.log("HOla");
+        console.log(datos);
+        try {
+            //! AQUI VA EL CAMBIO DE DATOS 
+            const data = await axios.post('/api/trainz/tables/changeFirmware', datos)
+            console.log(data.data);
+            
+        } catch (error) {
+            console.log("NO funciono el cambio");
+            
+            // console.log(error);
+            // setError(true)
+        }
         // console.log(newTodoValue);
-        //! AQUI VA EL LOGIN  Y LA CONFIRMACION DEL USUARIO
     }
     const onChange = (event: any) => {
         // Se toman los valores de VALUE y se guardan en la variable
