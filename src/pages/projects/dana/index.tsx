@@ -20,7 +20,7 @@ const DanaHome = () => {
                 <h2 className={styles.subtitulo}>Dispositivos</h2>
                 <section className={styles.tarjeta_contain}>
 
-                    <Link href={"/projects/dana/enlace"} className={styles.tarjeta}>
+                    {/* <Link href={"/projects/dana/enlace"} className={styles.tarjeta}>
                         <div className={styles.tarjeta_img}>
                             <Image
                                 src="/imgs/enlace.png"
@@ -33,7 +33,7 @@ const DanaHome = () => {
                             <h3>Tarjeta de enlace</h3>
                             <p>Visualizador de dispositivos de tarjeta de enlace</p>
                         </div>
-                    </Link>
+                    </Link> */}
 
                     <Link href={"/projects/dana/touch"} className={styles.tarjeta}>
                         <div className={styles.tarjeta_img}>
@@ -50,20 +50,20 @@ const DanaHome = () => {
                         </div>
                     </Link>
 
-                    {/* <Link href={"/projects/dana"} className={styles.tarjeta}>
+                    <Link href={"https://blue-alley-00f.notion.site/Dana-d28c2067f8e44b17859c3e44703e6b50"} className={styles.tarjeta}>
                         <div className={styles.tarjeta_img}>
                             <Image
-                                src="/imgs/salidas.png"
+                                src="/imgs/carpeta.png"
                                 alt="Pagina oficial de accesa: https://accesa.me/"
                                 width={200}
                                 height={200}
                             />
                         </div>
                         <div className={styles.tarjeta_info}>
-                            <h3>Tarjeta de Salidas</h3>
-                            <p>Configuracion de tarjeta de salidas</p>
+                            <h3>Documentación</h3>
+                            <p>Si necesitas saber donde estan los códigos y como funciona la domótica</p>
                         </div>
-                    </Link> */}
+                    </Link>
                     
                 </section>
             </main>
